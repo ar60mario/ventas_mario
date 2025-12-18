@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ar.com.ventas.entities.RenglonFactura" schema="mario" table="renglon_factura">
+        <id name="id" column="ID">
+            <generator class="identity"/>
+        </id>
+        <property name="orden" type="integer" column="ORDEN"/>
+        <property name="texto" type="string" column="TEXTO"/>
+        <property name="importe" type="double" column="IMPORTE"/>
+        <many-to-one name="factura"
+                    class="ar.com.ventas.entities.Factura"
+                     lazy="false">
+                     <column name="ID_FACTURA" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

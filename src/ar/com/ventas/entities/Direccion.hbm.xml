@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ar.com.ventas.entities.Direccion" schema="mario" table="direccion">
+        <id name="id" column="ID">
+            <generator class="identity"/>
+        </id>
+        <property name="calle" type="string" column="CALLE"/>
+        <property name="numero" type="string" column="NUMERO"/>
+        <property name="pisoDto" type="string" column="PISO_DTO"/>
+        <property name="codigoPostal" type="string" column="CODIGO_POSTAL"/>
+        <property name="localidad" type="string" column="LOCALIDAD"/>
+        <property name="provincia" type="string" column="PROVINCIA"/>
+    </class>
+</hibernate-mapping>

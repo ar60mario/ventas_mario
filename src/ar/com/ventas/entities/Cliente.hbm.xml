@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ar.com.ventas.entities.Cliente" schema="mario" table="cliente">
+        <id name="id" column="ID">
+            <generator class="identity"/>
+        </id>
+        <property name="codigo" type="integer" column="CODIGO"/>
+        <property name="razonSocial" type="string" column="RAZON_SOCIAL"/>
+        <property name="tipoDoc" type="integer" column="TIPO_DOC"/>
+        <property name="cuit" type="string" column="CUIT"/>
+        <property name="activo" type="boolean" column="ACTIVO"/>
+        <property name="generado" type="boolean" column="GENERADO"/>
+        <property name="categoriaAfip" type="integer" column="CATEGORIA_AFIP"/>
+        <property name="codigoMauro" type="string" column="CODIGO_MAURO"/>
+        <many-to-one name="direccion"
+                    class="ar.com.ventas.entities.Direccion"
+                     lazy="false">
+                     <column name="ID_DIRECCION" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="abono"
+                    class="ar.com.ventas.entities.Abono"
+                     lazy="false">
+                     <column name="ID_ABONO" not-null="false"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

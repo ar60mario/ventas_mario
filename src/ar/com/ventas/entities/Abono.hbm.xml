@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ar.com.ventas.entities.Abono" schema="mario" table="abono">
+        <id name="id" column="ID">
+            <generator class="identity"/>
+        </id>
+        <property name="codigo" type="integer" column="CODIGO"/>
+        <property name="activo" type="boolean" column="ACTIVO"/>
+        <property name="detalle" type="string" column="DETALLE"/>
+        <property name="importe" type="double" column="IMPORTE"/>
+    </class>
+</hibernate-mapping>

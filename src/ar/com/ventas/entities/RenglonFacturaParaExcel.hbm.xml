@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ar.com.ventas.entities.RenglonFacturaParaExcel" schema="mario" table="renglon_factura_para_excel">
+        <id name="id" column="ID">
+            <generator class="identity"/>
+        </id>
+        <property name="rubro" type="integer" column="RUBRO"/>
+        <property name="texto" type="text" column="TEXTO"/>
+        <property name="textoCorto" type="text" column="TEXTO_CORTO"/>
+        <property name="importe" type="double" column="IMPORTE"/>
+        <property name="activo" type="boolean" column="ACTIVO"/>
+    </class>
+</hibernate-mapping>

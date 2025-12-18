@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ar.com.ventas.entities.Configuracion" schema="mario" table="configuracion">
+        <id name="id" column="ID">
+            <generator class="identity"/>
+        </id>
+        <property name="sucursal" type="integer" column="SUCURSAL"/>
+        <property name="numeroFc" type="integer" column="NUMERO_FC"/>
+        <property name="numeroNc" type="integer" column="NUMERO_NC"/>
+    </class>
+</hibernate-mapping>
