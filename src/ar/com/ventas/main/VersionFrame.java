@@ -1,17 +1,14 @@
 package ar.com.ventas.main;
 
-
 public class VersionFrame extends javax.swing.JFrame {
 
-    
     public VersionFrame() {
         initComponents();
-        versionTxt.setText("DICIEMBRE 015-2025 ver: a");
+        versionTxt.setText("FEBRERO 020-2026 ver: a");
         versionTxt.setEditable(false);
         volverBtn.requestFocus();
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
